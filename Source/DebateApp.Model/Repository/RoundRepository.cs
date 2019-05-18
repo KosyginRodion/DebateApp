@@ -1,4 +1,5 @@
 ﻿using DebateApp.DataAccess.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,21 +26,21 @@ namespace DebateApp.DataAccess.Repository
 
 		public IEnumerable<Round> Find(Func<Round, bool> predicate)
 		{
-			var rounds = db.Rounds.Where(predicate);
+			var rounds = db.Rounds.Include(r => r.Chair).Where(predicate);
 
 			return rounds;
 		}
 
 		public IEnumerable<Round> GetAll()
 		{
-			var rounds = db.Rounds.ToList();
+			var rounds = db.Rounds.Include(r => r.Chair).ToList();
 
 			return rounds;
 		}
 
 		public Round GetById(int id)
 		{
-			var round = db.Rounds.Single(t => t.Id == id);
+			var round = db.Rounds.Include(r => r.Chair).Single(t => t.Id == id);
 
 			return round;
 		}

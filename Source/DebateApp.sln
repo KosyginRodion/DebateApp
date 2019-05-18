@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebateApp.DataAccess", "DebateApp.Model\DebateApp.DataAccess.csproj", "{2A6B6A0B-7EDC-48AF-83E8-B06270011258}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebateApp.Service", "DebateApp.Service\DebateApp.Service.csproj", "{FADD3139-1714-454E-AB6C-0018A80DDEFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2A6B6A0B-7EDC-48AF-83E8-B06270011258}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A6B6A0B-7EDC-48AF-83E8-B06270011258}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A6B6A0B-7EDC-48AF-83E8-B06270011258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FADD3139-1714-454E-AB6C-0018A80DDEFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FADD3139-1714-454E-AB6C-0018A80DDEFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FADD3139-1714-454E-AB6C-0018A80DDEFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FADD3139-1714-454E-AB6C-0018A80DDEFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
