@@ -1,17 +1,14 @@
 ﻿using DebateApp.Enum;
-using System.ComponentModel.DataAnnotations;
 
-namespace DebateApp.DataAccess.Models
+namespace DebateApp.Dto
 {
-	public class Person : BaseModel
+	public class PersonDto
 	{
-		[Required]
 		public string FirstName { get; set; }
 
-		[Required]
 		public string LastName { get; set; }
 
-		public Role Role { get; set; } = Role.Member;
+		public Role Role { get; set; }
 
 		public int PhoneNumber { get; set; }
 

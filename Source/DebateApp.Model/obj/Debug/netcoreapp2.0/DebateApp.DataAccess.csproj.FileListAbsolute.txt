@@ -1,6 +1,12 @@
 D:\Application\DebateApp\Source\DebateApp.Model\bin\Debug\netcoreapp2.0\DebateApp.DataAccess.deps.json
 D:\Application\DebateApp\Source\DebateApp.Model\bin\Debug\netcoreapp2.0\DebateApp.DataAccess.dll
+D:\Application\DebateApp\Source\DebateApp.Model\bin\Debug\netcoreapp2.0\DebateApp.DataAccess.pdb
+D:\Application\DebateApp\Source\DebateApp.Model\bin\Debug\netcoreapp2.0\DebateApp.dll
+D:\Application\DebateApp\Source\DebateApp.Model\bin\Debug\netcoreapp2.0\DebateApp.pdb
 D:\Application\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.DataAccess.csprojAssemblyReference.cache
 D:\Application\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.DataAccess.csproj.CoreCompileInputs.cache
 D:\Application\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.DataAccess.AssemblyInfoInputs.cache
 D:\Application\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.DataAccess.AssemblyInfo.cs
+D:\Application\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.DataAccess.csproj.CopyComplete
+D:\Application\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.DataAccess.dll
+D:\Application\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.DataAccess.pdb

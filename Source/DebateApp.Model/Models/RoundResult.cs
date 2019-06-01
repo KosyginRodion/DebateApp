@@ -1,4 +1,4 @@
-﻿using DebateApp.DataAccess.Enum;
+﻿using DebateApp.Enum;
 using System.ComponentModel.DataAnnotations;
 
 namespace DebateApp.DataAccess.Models

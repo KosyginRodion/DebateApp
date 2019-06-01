@@ -1,4 +1,4 @@
-﻿namespace DebateApp.DataAccess.Enum
+﻿namespace DebateApp.Enum
 {
 	public enum Language
 	{

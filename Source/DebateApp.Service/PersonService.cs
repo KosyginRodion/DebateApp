@@ -2,6 +2,8 @@
 using System.Linq;
 using DebateApp.DataAccess.Models;
 using DebateApp.DataAccess.Repository;
+using DebateApp.Dto;
+using DebateApp.Enum;
 
 namespace DebateApp.Service
 {
@@ -9,12 +11,12 @@ namespace DebateApp.Service
 	{
 		private readonly IPersonRepository personRepo;
 
-		public PersonService(IPersonRepository personRepository)
+		public PersonService(IPersonRepository personRepo)
 		{
-			this.personRepo = personRepository;
+			this.personRepo = personRepo;
 		}
 
-		public void Add (Person person)
+		public void Add (PersonDto person)
 		{
 			var newPerson = new Person
 			{
@@ -24,12 +26,12 @@ namespace DebateApp.Service
 				Email = person.Email
 			};
 
-			personRepo.Add(person);
+			personRepo.Add(newPerson);
 		}
 
-		public void EditInfo (int personOldId, Person personEdit)
+		public void EditInfo (int personId, PersonDto personEdit)
 		{
-			var person = personRepo.GetById(personOldId);
+			var person = personRepo.GetById(personId);
 
 			person.FirstName = personEdit.FirstName;
 			person.LastName = personEdit.LastName;
@@ -44,9 +46,17 @@ namespace DebateApp.Service
 			personRepo.Remove(personId);
 		}
 
-		public IEnumerable<Person> GetAll()
+		public IEnumerable<PersonDto> GetAll()
 		{
-			var persons = personRepo.GetAll().Where(p => !p.Deleted);
+			var persons = personRepo.GetAll().Where(p => !p.Deleted)
+				.Select(p => new PersonDto
+				{
+					FirstName = p.FirstName,
+					LastName = p.LastName,
+					Email = p.Email,
+					PhoneNumber = p.PhoneNumber,
+					Role = p.Role
+				});
 
 			return persons;
 		}
@@ -55,7 +65,7 @@ namespace DebateApp.Service
 		{
 			var person = personRepo.GetById(personId);
 
-			person.Role = DataAccess.Enum.Role.Admin;
+			person.Role = Role.Admin;
 
 			personRepo.Update(person);
 		}
@@ -64,7 +74,7 @@ namespace DebateApp.Service
 		{
 			var person = personRepo.GetById(personId);
 
-			person.Role = DataAccess.Enum.Role.Member;
+			person.Role = Role.Member;
 
 			personRepo.Update(person);
 		}

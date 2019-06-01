@@ -1,15 +1,13 @@
 ﻿using DebateApp.Enum;
 using System;
-using System.ComponentModel.DataAnnotations;
 
-namespace DebateApp.DataAccess.Models
+namespace DebateApp.Dto
 {
-	public class RoundRegistration : BaseModel
+	public class RoundRegistrationDto
 	{
-		[Required]
-		public Person Player1 { get; set; }
+		public int Player1Id { get; set; }
 
-		public Person Player2 { get; set; }
+		public int Player2Id { get; set; }
 
 		public DateTime DateTimeRegistration { get; set; }
 
