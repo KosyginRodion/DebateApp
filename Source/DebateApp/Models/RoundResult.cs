@@ -1,7 +1,7 @@
 ﻿using DebateApp.Enum;
 using System.ComponentModel.DataAnnotations;
 
-namespace DebateApp.DataAccess.Models
+namespace DebateApp.Models
 {
 	public class RoundResult : BaseModel
 	{
