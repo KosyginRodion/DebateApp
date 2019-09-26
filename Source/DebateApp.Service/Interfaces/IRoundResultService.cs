@@ -1,4 +1,4 @@
-﻿using DebateApp.Dto;
+﻿using DebateApp.DataAccess.Models;
 using System.Collections.Generic;
 
 namespace DebateApp.Service
@@ -9,16 +9,16 @@ namespace DebateApp.Service
 		/// Добавить раунд
 		/// </summary>
 		/// <param name="round"></param>
-		void AddRound(RoundDto round);
+		void AddRound(Round round);
 
 		/// <summary>
 		/// Добавить результат раунда
 		/// </summary>
-		void AddResults(IEnumerable<RoundResultDto> roundResult);
+		void AddResults(IEnumerable<RoundResult> roundResult);
 
 		/// <summary>
 		/// Получить все результаты раундов
 		/// </summary>
-		IEnumerable<RoundResultViewDto> GetAll();
+		IEnumerable<RoundResult> GetAll();
 	}
 }
