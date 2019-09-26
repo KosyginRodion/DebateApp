@@ -2,36 +2,46 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DebateApp.Mvc.Models;
+using DebateApp.Service;
+using DebateApp.Models;
+using DebateApp.Enum;
 
 namespace DebateApp.Mvc.Controllers
 {
-    public class HomeController : Controller
-    {
-        public IActionResult Index()
-        {
-            return View();
-        }
+	public class HomeController : Controller
+	{
+		private readonly IRoundRegistrationService roundRegistrationService;
+		private readonly IPersonService personService;
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
+		public HomeController(/*IRoundRegistrationService roundRegistrationService*/)
+		{
+			//this.roundRegistrationService = roundRegistrationService;
+		}
+		[HttpPost]
+        public void Registr(RoundRegistrationDto roundRegistrationDto)
+		{
+			Language lang = Language.Russian;
+			if (roundRegistrationDto.Language == "Русский")
+			{
+				lang = Language.Russian;
+			}
+			else if (roundRegistrationDto.Language == "Английский")
+			{
+				lang = Language.English;
+			}
+			var roundRegistration = new RoundRegistration
+			{
+				Player1 = personService.GetById(roundRegistrationDto.Player1_Id),
+				Player2 = personService.GetById(roundRegistrationDto.Player2_Id),
+				DateTimeRegistration = DateTime.Parse(roundRegistrationDto.DateTimeRegistration),
+				IsJudge = roundRegistrationDto.IsJudge,
+				Comment = roundRegistrationDto.Comment,
+				Language = lang
+			};
 
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+			roundRegistrationService.Registr(roundRegistration);
+		}
     }
 }

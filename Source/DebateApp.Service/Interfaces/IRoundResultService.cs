@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DebateApp.Service
 {
-	interface IRoundResultService
+	public interface IRoundResultService
 	{
 		/// <summary>
 		/// Добавить раунд

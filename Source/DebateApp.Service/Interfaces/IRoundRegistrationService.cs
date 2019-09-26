@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace DebateApp.Service
 {
-	interface IRoundRegistrationService
+	public interface IRoundRegistrationService
 	{
 		/// <summary>
 		/// Зарегистрироваться на раунд

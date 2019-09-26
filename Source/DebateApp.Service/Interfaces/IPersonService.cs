@@ -3,8 +3,10 @@ using DebateApp.Models;
 
 namespace DebateApp.Service
 {
-	interface IPersonService
+	public interface IPersonService
 	{
+		Person GetById(int id);
+
 		/// <summary>
 		/// Создать нового пользователя
 		/// </summary>
