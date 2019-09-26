@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using DebateApp.DataAccess.Models;
 using DebateApp.DataAccess.Repository;
 
@@ -30,15 +29,15 @@ namespace DebateApp.Service
 
 		public IEnumerable<RoundRegistration> GetAll()
 		{
-            var registrations = registrationRepo.GetAll();
+			var registrations = registrationRepo.GetAll();
 
 			return registrations;
 		}
 
 		public IEnumerable<RoundRegistration> GetResentRegistration(DateTime dateTime)
 		{
-            var resentRegistrations = registrationRepo
-                .Find(r => r.DateTimeRegistration >= dateTime);				
+			var resentRegistrations = registrationRepo
+				.Find(r => r.DateTimeRegistration >= dateTime);
 
 			return resentRegistrations;
 		}

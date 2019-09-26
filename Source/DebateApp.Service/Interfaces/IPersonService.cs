@@ -13,7 +13,7 @@ namespace DebateApp.Service
 		/// <summary>
 		/// Изменить данные о пользователе
 		/// </summary>
-		void EditInfo(int personId, Person person);
+		void EditInfo(Person person);
 
 		/// <summary>
 		/// Отметить пользователя как удаленного

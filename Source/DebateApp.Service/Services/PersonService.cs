@@ -18,24 +18,11 @@ namespace DebateApp.Service
 
 		public void Add (Person person)
 		{
-			var newPerson = new Person
-			{
-				FirstName = person.FirstName,
-				LastName = person.LastName,
-				Email = person.Email
-			};
-
-			personRepo.Add(newPerson);
+			personRepo.Add(person);
 		}
 
-		public void EditInfo (int personId, Person personEdit)
+		public void EditInfo (Person person)
 		{
-			var person = personRepo.GetById(personId);
-
-			person.FirstName = personEdit.FirstName;
-			person.LastName = personEdit.LastName;
-			person.Email = personEdit.Email;
-
 			personRepo.Update(person);
 		}
 
@@ -46,14 +33,7 @@ namespace DebateApp.Service
 
 		public IEnumerable<Person> GetAll()
 		{
-			var persons = personRepo.GetAll().Where(p => !p.Deleted)
-				.Select(p => new Person
-				{
-					FirstName = p.FirstName,
-					LastName = p.LastName,
-					Email = p.Email,
-					Role = p.Role
-				});
+			var persons = personRepo.GetAll().Where(p => !p.Deleted);
 
 			return persons;
 		}
