@@ -15,11 +15,14 @@ namespace DebateApp.DataAccess.Repository
 			db = context;
 		}
 
-		public void Add(RoundResult item)
+		public void Add(IEnumerable<RoundResult> items)
 		{
-			item.CreatedDate = DateTime.Now;
+			foreach (var item in items)
+			{
+				item.CreatedDate = DateTime.Now;
+			}
 
-			db.Add(item);
+			db.Add(items);
 
 			db.SaveChanges();
 		}

@@ -12,7 +12,7 @@ namespace DebateApp.DataAccess.Repository
 
 		RoundResult GetById(int id);
 
-		void Add(RoundResult item);
+		void Add(IEnumerable<RoundResult> items);
 
 		void Update(RoundResult item);
 
