@@ -2,7 +2,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace DebateApp.DataAccess.Models
+namespace DebateApp.Models
 {
 	public class RoundRegistration : BaseModel
 	{

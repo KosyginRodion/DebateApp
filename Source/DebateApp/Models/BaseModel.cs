@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DebateApp.DataAccess
+namespace DebateApp.Models
 {
 	public class BaseModel
 	{

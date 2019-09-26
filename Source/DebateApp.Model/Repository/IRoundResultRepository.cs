@@ -1,4 +1,4 @@
-﻿using DebateApp.DataAccess.Models;
+﻿using DebateApp.Models;
 using System;
 using System.Collections.Generic;
 
@@ -12,7 +12,7 @@ namespace DebateApp.DataAccess.Repository
 
 		RoundResult GetById(int id);
 
-		void Add(RoundResult item);
+		void Add(IEnumerable<RoundResult> items);
 
 		void Update(RoundResult item);
 

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using DebateApp.DataAccess.Models;
+using DebateApp.Models;
 using DebateApp.DataAccess.Repository;
+using System.Linq;
 
 
 namespace DebateApp.Service
@@ -27,15 +27,13 @@ namespace DebateApp.Service
 
 		public void AddResults(IEnumerable<RoundResult> roundResults)
 		{
-			foreach(var roundResult in roundResults)
-			{
-				roundResultRepo.Add(roundResult);
-			}
+			roundResultRepo.Add(roundResults);
 		}
 
 		public IEnumerable<RoundResult> GetAll()
 		{
-			var roundResults = roundResultRepo.GetAll();
+			var roundResults = roundResultRepo.GetAll()
+				.Where(r => !r.Deleted);
 
 			return roundResults;
 		}

@@ -1,4 +1,4 @@
-﻿using DebateApp.DataAccess.Models;
+﻿using DebateApp.Models;
 using System.Collections.Generic;
 
 namespace DebateApp.Service
