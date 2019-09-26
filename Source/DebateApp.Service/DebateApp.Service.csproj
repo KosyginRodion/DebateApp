@@ -8,8 +8,4 @@
     <ProjectReference Include="..\DebateApp.Model\DebateApp.DataAccess.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Validation\" />
-  </ItemGroup>
-
 </Project>

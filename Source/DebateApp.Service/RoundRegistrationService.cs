@@ -7,12 +7,12 @@ using DebateApp.Dto;
 
 namespace DebateApp.Service
 {
-	public class RegistrationRoundService : IRegistrationRoundService
+	public class RoundRegistrationService : IRoundRegistrationService
 	{
 		private readonly IRoundRegistrationRepository registrationRepo;
 		private readonly IPersonRepository personRepo;
 
-		public RegistrationRoundService(IRoundRegistrationRepository registrationRepo,
+		public RoundRegistrationService(IRoundRegistrationRepository registrationRepo,
 			IPersonRepository personRepo)
 		{
 			this.registrationRepo = registrationRepo;
@@ -39,7 +39,6 @@ namespace DebateApp.Service
 						FirstName = r.Player1.FirstName,
 						LastName = r.Player1.LastName,
 						Email = r.Player1.Email,
-						PhoneNumber = r.Player1.PhoneNumber,
 						Role = r.Player1.Role
 					},
 					Player2 = new PersonDto
@@ -47,7 +46,6 @@ namespace DebateApp.Service
 						FirstName = r.Player2.FirstName,
 						LastName = r.Player2.LastName,
 						Email = r.Player2.Email,
-						PhoneNumber = r.Player2.PhoneNumber,
 						Role = r.Player2.Role
 					},
 					DateTimeRegistration = r.DateTimeRegistration,
@@ -69,7 +67,6 @@ namespace DebateApp.Service
 						FirstName = r.Player1.FirstName,
 						LastName = r.Player1.LastName,
 						Email = r.Player1.Email,
-						PhoneNumber = r.Player1.PhoneNumber,
 						Role = r.Player1.Role
 					},
 					Player2 = new PersonDto
@@ -77,7 +74,6 @@ namespace DebateApp.Service
 						FirstName = r.Player2.FirstName,
 						LastName = r.Player2.LastName,
 						Email = r.Player2.Email,
-						PhoneNumber = r.Player2.PhoneNumber,
 						Role = r.Player2.Role
 					},
 					DateTimeRegistration = r.DateTimeRegistration,

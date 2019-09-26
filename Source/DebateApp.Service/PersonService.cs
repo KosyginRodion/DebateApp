@@ -22,7 +22,6 @@ namespace DebateApp.Service
 			{
 				FirstName = person.FirstName,
 				LastName = person.LastName,
-				PhoneNumber = person.PhoneNumber,
 				Email = person.Email
 			};
 
@@ -35,7 +34,6 @@ namespace DebateApp.Service
 
 			person.FirstName = personEdit.FirstName;
 			person.LastName = personEdit.LastName;
-			person.PhoneNumber = personEdit.PhoneNumber;
 			person.Email = personEdit.Email;
 
 			personRepo.Update(person);
@@ -54,7 +52,6 @@ namespace DebateApp.Service
 					FirstName = p.FirstName,
 					LastName = p.LastName,
 					Email = p.Email,
-					PhoneNumber = p.PhoneNumber,
 					Role = p.Role
 				});
 

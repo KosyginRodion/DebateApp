@@ -10,8 +10,6 @@ namespace DebateApp.Dto
 
 		public Role Role { get; set; }
 
-		public int PhoneNumber { get; set; }
-
 		public string Email { get; set; }
 	}
 }

@@ -66,7 +66,6 @@ namespace DebateApp.Service
 						Email = r.Player.Email,
 						FirstName = r.Player.FirstName,
 						LastName = r.Player.LastName,
-						PhoneNumber =r.Player.PhoneNumber,
 						Role = r.Player.Role
 					},
 					Round = new RoundViewDto
@@ -76,7 +75,6 @@ namespace DebateApp.Service
 							Email = r.Round.Chair.Email,
 							FirstName = r.Round.Chair.FirstName,
 							LastName = r.Round.Chair.LastName,
-							PhoneNumber = r.Round.Chair.PhoneNumber,
 							Role = r.Round.Chair.Role
 						},
 						DateTime = r.Round.DateTime,

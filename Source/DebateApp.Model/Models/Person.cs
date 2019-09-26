@@ -13,8 +13,6 @@ namespace DebateApp.DataAccess.Models
 
 		public Role Role { get; set; } = Role.Member;
 
-		public int PhoneNumber { get; set; }
-
 		public string Email { get; set; }
 	}
 }
