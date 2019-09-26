@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DebateApp.DataAccess", "Deb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DebateApp.Service", "DebateApp.Service\DebateApp.Service.csproj", "{FADD3139-1714-454E-AB6C-0018A80DDEFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebateApp", "DebateApp\DebateApp.csproj", "{569B60B3-4D27-4464-B509-87E5A9064671}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DebateApp", "DebateApp\DebateApp.csproj", "{569B60B3-4D27-4464-B509-87E5A9064671}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebateApp.Mvc", "DebateApp.Mvc\DebateApp.Mvc.csproj", "{D91DCE30-6DA1-424C-B503-B4A829CF3DDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{569B60B3-4D27-4464-B509-87E5A9064671}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{569B60B3-4D27-4464-B509-87E5A9064671}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{569B60B3-4D27-4464-B509-87E5A9064671}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D91DCE30-6DA1-424C-B503-B4A829CF3DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D91DCE30-6DA1-424C-B503-B4A829CF3DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D91DCE30-6DA1-424C-B503-B4A829CF3DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D91DCE30-6DA1-424C-B503-B4A829CF3DDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
