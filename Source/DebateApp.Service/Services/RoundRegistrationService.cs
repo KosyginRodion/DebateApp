@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DebateApp.DataAccess.Models;
 using DebateApp.DataAccess.Repository;
+using System.Linq;
 
 namespace DebateApp.Service
 {
@@ -29,7 +30,8 @@ namespace DebateApp.Service
 
 		public IEnumerable<RoundRegistration> GetAll()
 		{
-			var registrations = registrationRepo.GetAll();
+			var registrations = registrationRepo.GetAll()
+				.Where(r => !r.Deleted);
 
 			return registrations;
 		}
