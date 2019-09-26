@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using DebateApp.DataAccess.Models;
+using DebateApp.Models;
 using DebateApp.DataAccess.Repository;
 using System.Linq;
 

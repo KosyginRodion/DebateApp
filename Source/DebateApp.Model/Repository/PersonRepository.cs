@@ -1,4 +1,4 @@
-﻿using DebateApp.DataAccess.Models;
+﻿using DebateApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

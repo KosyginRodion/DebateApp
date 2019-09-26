@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using DebateApp.DataAccess.Models;
+using DebateApp.Models;
 
 namespace DebateApp.Service
 {

@@ -1,4 +1,4 @@
-﻿using DebateApp.DataAccess.Models;
+﻿using DebateApp.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DebateApp.DataAccess
