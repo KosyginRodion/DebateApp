@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using DebateApp.DataAccess.Models;
 using DebateApp.DataAccess.Repository;
-using DebateApp.Dto;
 
 namespace DebateApp.Service
 {
@@ -29,78 +28,24 @@ namespace DebateApp.Service
 			registrationRepo.Update(registration);
 		}
 
-		public IEnumerable<RoundRegistrationViewDto> GetAll()
+		public IEnumerable<RoundRegistration> GetAll()
 		{
-			var registrations = registrationRepo.GetAll()
-				.Select(r => new RoundRegistrationViewDto
-				{
-					Player1 = new PersonDto
-					{
-						FirstName = r.Player1.FirstName,
-						LastName = r.Player1.LastName,
-						Email = r.Player1.Email,
-						Role = r.Player1.Role
-					},
-					Player2 = new PersonDto
-					{
-						FirstName = r.Player2.FirstName,
-						LastName = r.Player2.LastName,
-						Email = r.Player2.Email,
-						Role = r.Player2.Role
-					},
-					DateTimeRegistration = r.DateTimeRegistration,
-					IsJudge = r.IsJudge,
-					Language = r.Language,
-					Comment = r.Comment
-				});
+            var registrations = registrationRepo.GetAll();
 
 			return registrations;
 		}
 
-		public IEnumerable<RoundRegistrationViewDto> GetResentRegistration(DateTime dateTime)
+		public IEnumerable<RoundRegistration> GetResentRegistration(DateTime dateTime)
 		{
-			var resentRegistrations = registrationRepo.Find(r => r.DateTimeRegistration >= dateTime)
-				.Select(r => new RoundRegistrationViewDto
-				{
-					Player1 = new PersonDto
-					{
-						FirstName = r.Player1.FirstName,
-						LastName = r.Player1.LastName,
-						Email = r.Player1.Email,
-						Role = r.Player1.Role
-					},
-					Player2 = new PersonDto
-					{
-						FirstName = r.Player2.FirstName,
-						LastName = r.Player2.LastName,
-						Email = r.Player2.Email,
-						Role = r.Player2.Role
-					},
-					DateTimeRegistration = r.DateTimeRegistration,
-					IsJudge = r.IsJudge,
-					Language = r.Language,
-					Comment = r.Comment
-				});
+            var resentRegistrations = registrationRepo
+                .Find(r => r.DateTimeRegistration >= dateTime);				
 
 			return resentRegistrations;
 		}
 
-		public void Registr(RoundRegistrationDto roundRegistration)
+		public void Registr(RoundRegistration roundRegistration)
 		{
-			var player1 = personRepo.GetById(roundRegistration.Player1Id);
-			var player2 = personRepo.GetById(roundRegistration.Player2Id);
-
-			var newRegistration = new RoundRegistration
-			{
-				Player1 = player1,
-				Player2 = player2,
-				DateTimeRegistration = roundRegistration.DateTimeRegistration,
-				IsJudge = roundRegistration.IsJudge,
-				Language = roundRegistration.Language,
-				Comment = roundRegistration.Comment
-			};
-
-			registrationRepo.Add(newRegistration);
+			registrationRepo.Add(roundRegistration);
 		}
 
 		public void RemoveRegistration(int registrationId)

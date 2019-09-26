@@ -1,4 +1,4 @@
-﻿using DebateApp.Dto;
+﻿using DebateApp.DataAccess.Models;
 using System;
 using System.Collections.Generic;
 
@@ -9,7 +9,7 @@ namespace DebateApp.Service
 		/// <summary>
 		/// Зарегистрироваться на раунд
 		/// </summary>
-		void Registr(RoundRegistrationDto roundRegistration);
+		void Registr(RoundRegistration roundRegistration);
 
 		/// <summary>
 		/// Отменить регистрацию на раунд как удаленную
@@ -24,12 +24,12 @@ namespace DebateApp.Service
 		/// <summary>
 		/// Получить все регистрации (кроме удаленных)
 		/// </summary>
-		IEnumerable<RoundRegistrationViewDto> GetAll();
+		IEnumerable<RoundRegistration> GetAll();
 
 		/// <summary>
 		/// Получить недавние регистрации
 		/// </summary>
 		/// <param name="dateTime">Дата, начиная с которой выбираются регистрации</param>
-		IEnumerable<RoundRegistrationViewDto> GetResentRegistration(DateTime dateTime);
+		IEnumerable<RoundRegistration> GetResentRegistration(DateTime dateTime);
 	}
 }

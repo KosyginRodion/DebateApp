@@ -1,5 +1,5 @@
-﻿using DebateApp.Dto;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using DebateApp.DataAccess.Models;
 
 namespace DebateApp.Service
 {
@@ -8,12 +8,12 @@ namespace DebateApp.Service
 		/// <summary>
 		/// Создать нового пользователя
 		/// </summary>
-		void Add(PersonDto person);
+		void Add(Person person);
 
 		/// <summary>
 		/// Изменить данные о пользователе
 		/// </summary>
-		void EditInfo(int personId, PersonDto person);
+		void EditInfo(int personId, Person person);
 
 		/// <summary>
 		/// Отметить пользователя как удаленного
@@ -23,7 +23,7 @@ namespace DebateApp.Service
 		/// <summary>
 		/// Получить всех пользователей (кроме помеченных на удаление)
 		/// </summary>
-		IEnumerable<PersonDto> GetAll();
+		IEnumerable<Person> GetAll();
 
 		/// <summary>
 		/// Назначить пользователя аднимистратором

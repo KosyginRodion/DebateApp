@@ -2,7 +2,6 @@
 using System.Linq;
 using DebateApp.DataAccess.Models;
 using DebateApp.DataAccess.Repository;
-using DebateApp.Dto;
 using DebateApp.Enum;
 
 namespace DebateApp.Service
@@ -11,12 +10,13 @@ namespace DebateApp.Service
 	{
 		private readonly IPersonRepository personRepo;
 
+
 		public PersonService(IPersonRepository personRepo)
 		{
 			this.personRepo = personRepo;
 		}
 
-		public void Add (PersonDto person)
+		public void Add (Person person)
 		{
 			var newPerson = new Person
 			{
@@ -28,7 +28,7 @@ namespace DebateApp.Service
 			personRepo.Add(newPerson);
 		}
 
-		public void EditInfo (int personId, PersonDto personEdit)
+		public void EditInfo (int personId, Person personEdit)
 		{
 			var person = personRepo.GetById(personId);
 
@@ -44,10 +44,10 @@ namespace DebateApp.Service
 			personRepo.Remove(personId);
 		}
 
-		public IEnumerable<PersonDto> GetAll()
+		public IEnumerable<Person> GetAll()
 		{
 			var persons = personRepo.GetAll().Where(p => !p.Deleted)
-				.Select(p => new PersonDto
+				.Select(p => new Person
 				{
 					FirstName = p.FirstName,
 					LastName = p.LastName,
