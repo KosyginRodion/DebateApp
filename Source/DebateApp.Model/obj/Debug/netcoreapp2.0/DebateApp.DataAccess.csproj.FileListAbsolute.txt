@@ -22,3 +22,14 @@ C:\DebateApp\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.
 C:\DebateApp\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.DataAccess.csproj.CopyComplete
 C:\DebateApp\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.DataAccess.dll
 C:\DebateApp\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.DataAccess.pdb
+C:\fff\DebateApp\Source\DebateApp.Model\bin\Debug\netcoreapp2.0\DebateApp.DataAccess.deps.json
+C:\fff\DebateApp\Source\DebateApp.Model\bin\Debug\netcoreapp2.0\DebateApp.DataAccess.dll
+C:\fff\DebateApp\Source\DebateApp.Model\bin\Debug\netcoreapp2.0\DebateApp.DataAccess.pdb
+C:\fff\DebateApp\Source\DebateApp.Model\bin\Debug\netcoreapp2.0\DebateApp.dll
+C:\fff\DebateApp\Source\DebateApp.Model\bin\Debug\netcoreapp2.0\DebateApp.pdb
+C:\fff\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.DataAccess.csprojAssemblyReference.cache
+C:\fff\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.DataAccess.AssemblyInfoInputs.cache
+C:\fff\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.DataAccess.AssemblyInfo.cs
+C:\fff\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.DataAccess.csproj.CopyComplete
+C:\fff\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.DataAccess.dll
+C:\fff\DebateApp\Source\DebateApp.Model\obj\Debug\netcoreapp2.0\DebateApp.DataAccess.pdb
