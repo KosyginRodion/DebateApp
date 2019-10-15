@@ -19,6 +19,12 @@ namespace DebateApp.Mvc.Controllers
 		{
 			//this.roundRegistrationService = roundRegistrationService;
 		}
+
+		public ActionResult Index()
+		{
+			return View();
+		}
+
 		[HttpPost]
         public void Registr(RoundRegistrationDto roundRegistrationDto)
 		{

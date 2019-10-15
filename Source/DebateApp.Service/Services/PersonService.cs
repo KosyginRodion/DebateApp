@@ -55,5 +55,10 @@ namespace DebateApp.Service
 
 			personRepo.Update(person);
 		}
+
+		public Person GetById(int id)
+		{
+			throw new System.NotImplementedException();
+		}
 	}
 }
