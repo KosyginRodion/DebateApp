@@ -3,23 +3,60 @@
 }
 @model IEnumerable<DebateApp.Models.Person>
 
-    <div>
-        <table class="table" width="70%">
-            <tr class="header">
-                <th scope="col" width="50px"> Id</th>
-                <th scope="col"> Фамилия</th>
-                <th scope="col">Имя</th>
-                <th scope="col">Email</th>
+<div>
+    <table class="table" width="70%">
+        <tr class="header">
+            <th scope="col" width="50px"> Id</th>
+            <th scope="col"> Фамилия</th>
+            <th scope="col">Имя</th>
+            <th scope="col">Email</th>
+        </tr>
+        @foreach (var b in Model)
+        {
+            <tr>
+                <th scope="row">@b.Id</th>
+                <td>@b.LastName</td>
+                <td>@b.FirstName</td>
+                <td>@b.Email</td>
             </tr>
-            @foreach (var b in Model)
-            { 
-                <tr>
-                    <th scope="row">@b.Id</th>
-                    <td>@b.LastName</td>
-                    <td>@b.FirstName</td>
-                    <td>@b.Email</td>
-                </tr>
-            }
-        </table>
-    </div>
+        }
+    </table>
+</div>
 
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Зарегистрировать человека
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Регистрация человека</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("Create", "Person"))
+                {
+                        <div class="form-group">
+                            <label for="FirstName">Имя</label>
+                            <input type="text" class="form-control" id="FirstName" name="FirstName">
+                        </div>
+                        <div class="form-group">
+                            <label for="LastName">Фамилия</label>
+                            <input type="text" class="form-control" id="LastName", name="LastName">
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Почта</label>
+                            <input type="email" class="form-control" id="Email", name="Email">
+                        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                        <button type="submit" class="btn btn-primary">Регистрация</button>
+                    </div>
+                }
+            </div>
+    </div>
+</div>

@@ -50,8 +50,16 @@ namespace DebateApp.Mvc.Controllers
 		}
 
 		// GET: Person/Create
-		public ActionResult Create()
+		public ActionResult Create(string FirstName, string LastName, string Email)
         {
+			Person person = new Person();
+			person.FirstName = FirstName;
+			person.LastName = LastName;
+			person.Email = Email;
+
+			//PersonService personService = new PersonService();
+			//personService.Add(person);
+
             return View();
         }
     }
