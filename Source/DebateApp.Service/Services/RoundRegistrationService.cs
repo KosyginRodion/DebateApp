@@ -20,6 +20,7 @@ namespace DebateApp.Service
 
 		public void AddTeammate(int registrationId, int teammate2Id)
 		{
+			// TODO: Сделать проверку, что у игрока еще нет тиммейта
 			var registration = registrationRepo.GetById(registrationId);
 			var teammate = personRepo.GetById(teammate2Id);
 
@@ -39,13 +40,14 @@ namespace DebateApp.Service
 		public IEnumerable<RoundRegistration> GetResentRegistration(DateTime dateTime)
 		{
 			var resentRegistrations = registrationRepo
-				.Find(r => r.DateTimeRegistration >= dateTime);
+				.Where(r => r.DateTimeRegistration >= dateTime);
 
 			return resentRegistrations;
 		}
 
 		public void Registr(RoundRegistration roundRegistration)
 		{
+			// TODO: Сделать проверку, что игроки еще не зарегистрированы
 			registrationRepo.Add(roundRegistration);
 		}
 

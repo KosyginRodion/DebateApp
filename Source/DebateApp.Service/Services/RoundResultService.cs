@@ -3,7 +3,6 @@ using DebateApp.Models;
 using DebateApp.DataAccess.Repository;
 using System.Linq;
 
-
 namespace DebateApp.Service
 {
 	public class RoundResultService : IRoundResultService
@@ -22,11 +21,13 @@ namespace DebateApp.Service
 
 		public void AddRound(Round round)
 		{
+			// TODO: Сделать проверку, что раунда с такими параметрами не существует
 			roundRepo.Add(round);
 		}
 
 		public void AddResults(IEnumerable<RoundResult> roundResults)
 		{
+			// TODO: Сделать проверку, что введенные данные результатов соотвествуют правилам судейства
 			roundResultRepo.Add(roundResults);
 		}
 

@@ -6,7 +6,7 @@ namespace DebateApp.DataAccess.Repository
 {
 	public interface IRoundResultRepository
 	{
-		IEnumerable<RoundResult> Find(Func<RoundResult, Boolean> predicate);
+		IEnumerable<RoundResult> Where(Func<RoundResult, Boolean> predicate);
 
 		IEnumerable<RoundResult> GetAll();
 

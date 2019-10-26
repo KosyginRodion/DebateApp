@@ -6,7 +6,7 @@ namespace DebateApp.DataAccess.Repository
 {
 	public interface IPersonRepository
 	{
-		IEnumerable<Person> Find(Func<Person, Boolean> predicate);
+		IEnumerable<Person> Where(Func<Person, Boolean> predicate);
 
 		IEnumerable<Person> GetAll();
 

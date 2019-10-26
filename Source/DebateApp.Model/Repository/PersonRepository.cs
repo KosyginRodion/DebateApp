@@ -23,7 +23,7 @@ namespace DebateApp.DataAccess.Repository
 			db.SaveChanges();
 		}
 
-		public IEnumerable<Person> Find(Func<Person, bool> predicate)
+		public IEnumerable<Person> Where(Func<Person, bool> predicate)
 		{
 			var persons = db.Persons.Where(predicate);
 

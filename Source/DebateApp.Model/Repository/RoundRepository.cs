@@ -24,7 +24,7 @@ namespace DebateApp.DataAccess.Repository
 			db.SaveChanges();
 		}
 
-		public IEnumerable<Round> Find(Func<Round, bool> predicate)
+		public IEnumerable<Round> Where(Func<Round, bool> predicate)
 		{
 			var rounds = db.Rounds.Include(r => r.Chair).Where(predicate);
 
