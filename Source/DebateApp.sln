@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DebateApp", "DebateApp\Deba
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DebateApp.Mvc", "DebateApp.Mvc\DebateApp.Mvc.csproj", "{D91DCE30-6DA1-424C-B503-B4A829CF3DDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebateApp.MigrationTool", "MigrationTool\DebateApp.MigrationTool.csproj", "{DDFE5CCF-EACC-4F48-BAB3-E19BA9BF647B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DebateApp.MigrationTool", "DebateApp.MigrationTool\DebateApp.MigrationTool.csproj", "{395985AF-1735-451C-9F1E-5622380234AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{D91DCE30-6DA1-424C-B503-B4A829CF3DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D91DCE30-6DA1-424C-B503-B4A829CF3DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D91DCE30-6DA1-424C-B503-B4A829CF3DDC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DDFE5CCF-EACC-4F48-BAB3-E19BA9BF647B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DDFE5CCF-EACC-4F48-BAB3-E19BA9BF647B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DDFE5CCF-EACC-4F48-BAB3-E19BA9BF647B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DDFE5CCF-EACC-4F48-BAB3-E19BA9BF647B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{395985AF-1735-451C-9F1E-5622380234AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{395985AF-1735-451C-9F1E-5622380234AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{395985AF-1735-451C-9F1E-5622380234AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{395985AF-1735-451C-9F1E-5622380234AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
