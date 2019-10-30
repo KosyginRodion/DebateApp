@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2047
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DebateApp.DataAccess", "DebateApp.Model\DebateApp.DataAccess.csproj", "{2A6B6A0B-7EDC-48AF-83E8-B06270011258}"
 EndProject
@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DebateApp.Service", "Debate
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DebateApp", "DebateApp\DebateApp.csproj", "{569B60B3-4D27-4464-B509-87E5A9064671}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebateApp.Mvc", "DebateApp.Mvc\DebateApp.Mvc.csproj", "{D91DCE30-6DA1-424C-B503-B4A829CF3DDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DebateApp.Mvc", "DebateApp.Mvc\DebateApp.Mvc.csproj", "{D91DCE30-6DA1-424C-B503-B4A829CF3DDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebateApp.MigrationTool", "MigrationTool\DebateApp.MigrationTool.csproj", "{DDFE5CCF-EACC-4F48-BAB3-E19BA9BF647B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D91DCE30-6DA1-424C-B503-B4A829CF3DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D91DCE30-6DA1-424C-B503-B4A829CF3DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D91DCE30-6DA1-424C-B503-B4A829CF3DDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDFE5CCF-EACC-4F48-BAB3-E19BA9BF647B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDFE5CCF-EACC-4F48-BAB3-E19BA9BF647B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDFE5CCF-EACC-4F48-BAB3-E19BA9BF647B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDFE5CCF-EACC-4F48-BAB3-E19BA9BF647B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

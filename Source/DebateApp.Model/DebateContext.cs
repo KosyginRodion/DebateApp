@@ -20,7 +20,7 @@ namespace DebateApp.DataAccess
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer("server=мой;UserId=root;Password=mypassword;database=sqldebate;");
+			optionsBuilder.UseSqlServer("Server=DESKTOP-AO7NV33\\SQLEXPRESS;Database=myDataBase;Trusted_Connection=True;");
 		}
 	}
 }
