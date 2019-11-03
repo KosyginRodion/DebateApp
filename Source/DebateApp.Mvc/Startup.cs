@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DebateApp.DataAccess;
+using DebateApp.DataAccess.Repository;
+using DebateApp.Models;
+using DebateApp.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -21,7 +26,15 @@ namespace DebateApp.Mvc
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+			var connection = Configuration.GetConnectionString("DefaultConnection");
+			services.AddDbContext<DebateContext>(options =>
+				options.UseSqlServer(connection));
+
+			services.AddTransient<IRoundRegistrationRepository, RoundRegistrationRepository>();
+			services.AddTransient<IPersonRepository, PersonRepository>();
+			services.AddTransient<IRoundRegistrationService, RoundRegistrationService>();
+
+			services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

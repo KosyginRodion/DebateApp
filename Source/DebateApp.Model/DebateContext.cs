@@ -13,14 +13,10 @@ namespace DebateApp.DataAccess
 
 		public DbSet<RoundRegistration> RoundRegistrations { get; set; }
 
-		public DebateContext()
+		public DebateContext(DbContextOptions<DebateContext> options)
+			:base(options)
 		{
 			Database.EnsureCreated();
-		}
-
-		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-		{
-			optionsBuilder.UseSqlServer("server=мой;UserId=root;Password=mypassword;database=sqldebate;");
 		}
 	}
 }

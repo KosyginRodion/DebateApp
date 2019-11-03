@@ -5,7 +5,6 @@ namespace DebateApp.Models
 {
 	public class RoundResult : BaseModel
 	{
-		[Required]
 		public Round Round { get; set; }
 
 		[Required]

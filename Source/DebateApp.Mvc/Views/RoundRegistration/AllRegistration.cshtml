@@ -1,0 +1,69 @@
+﻿@model DebateApp.Mvc.Models.View.RoundRegistrationView
+@Html.Partial("RegistrationModalView")
+
+<div class="row">
+	<div class="col-md-4 button-group">
+		<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#registrationWindow">Зарегистрироваться на раунд</button>
+		<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#registrationWindow">Добавить тиммейта</button>
+	</div>
+	<div class="col-md-8">
+		<h3 style="text-align:center">Список зарегистрированных судей</h3>
+		<table class="table">
+			<tbody>
+			<thead>
+				<tr>
+					<th scope="col">Судья</th>
+					<th scope="col">Дата игры</th>
+					<th scope="col">Время игры</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var reg in Model.Judges)
+				{
+					<tr>
+						<td>@reg.Player1.FirstName @reg.Player1.LastName</td>
+						<td>@reg.DateTimeRegistration.ToString("D")</td>
+						<td>@reg.DateTimeRegistration.ToString("t")</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+		<h3 style="text-align:center">Список зарегистрированных команд</h3>
+		<table class="table">
+			<tbody>
+			<thead>
+				<tr>
+					<th scope="col">Первый игрок</th>
+					<th scope="col">Второй игрок</th>
+					<th scope="col">Дата игры</th>
+					<th scope="col">Время игры</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var reg in Model.Players)
+				{
+					<tr>
+						<td>@reg.Player1.FirstName @reg.Player1.LastName</td>
+						<td>@reg.Player2.FirstName @reg.Player2.LastName</td>
+						<td>@reg.DateTimeRegistration.ToString("D")</td>
+						<td>@reg.DateTimeRegistration.ToString("t")</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+<style>
+	.button-group {
+		margin-top: 2%;
+	}
+
+	.btn-dark {
+		color: white;
+		background-color: #706e6e;
+		margin-bottom: 2%;
+		width: 100%;
+	}
+</style>
